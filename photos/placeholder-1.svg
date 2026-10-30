@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 640">
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd59e"/><stop offset=".6" stop-color="#ffb8b8"/><stop offset="1" stop-color="#f7a6b8"/></linearGradient></defs>
+  <rect width="600" height="640" fill="url(#sky)"/>
+  <circle cx="300" cy="330" r="90" fill="#ffe58a" stroke="#1e5a2b" stroke-width="6"/>
+  <path d="M0 360 L120 230 L210 320 L330 190 L460 330 L530 260 L600 320 L600 640 L0 640 Z" fill="#8fd06a" stroke="#1e5a2b" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M0 430 Q150 400 300 430 T600 430 L600 640 L0 640 Z" fill="#8ec7ea" stroke="#1e5a2b" stroke-width="6"/>
+  <path d="M60 480 L130 480 M200 520 L300 520 M380 470 L450 470 M420 560 L520 560 M90 580 L170 580" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".8"/>
+  <g stroke="#1e5a2b" stroke-width="5" stroke-linecap="round" fill="none"><path d="M120 110 q15 -12 30 0 q15 -12 30 0"/><path d="M420 80 q12 -10 24 0 q12 -10 24 0"/></g>
+  <text x="300" y="615" text-anchor="middle" font-family="Chalkboard SE, Comic Sans MS, cursive" font-size="28" font-weight="700" fill="#1e5a2b" opacity=".6">replace me with a photo ♡</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 640">
+  <rect width="600" height="640" fill="#c9e7f5"/>
+  <rect y="380" width="600" height="260" fill="#e9c79a" stroke="#1e5a2b" stroke-width="6"/>
+  <g stroke="#1e5a2b" stroke-width="6" stroke-linejoin="round">
+    <ellipse cx="300" cy="470" rx="210" ry="50" fill="#fff"/>
+    <g fill="#f2b56b">
+      <rect x="160" y="400" width="280" height="56" rx="28"/>
+      <rect x="170" y="350" width="260" height="56" rx="28"/>
+      <rect x="180" y="300" width="240" height="56" rx="28"/>
+      <rect x="190" y="250" width="220" height="56" rx="28"/>
+    </g>
+    <path d="M230 250 Q300 220 370 250 L360 300 Q340 280 330 320 Q300 300 280 330 Q270 290 240 300 Z" fill="#fff6c8"/>
+    <rect x="270" y="220" width="60" height="34" rx="6" fill="#f9d64a"/>
+    <path d="M260 200 C250 175 275 170 285 185 C295 165 320 175 305 200 L285 225 Z" fill="#e8455a"/>
+    <path d="M330 205 C325 185 345 180 352 192 C362 178 380 190 368 208 L350 225 Z" fill="#e8455a"/>
+  </g>
+  <g fill="#5b6fd6" stroke="#1e5a2b" stroke-width="4"><circle cx="220" cy="245" r="11"/><circle cx="390" cy="248" r="11"/><circle cx="240" cy="232" r="9"/></g>
+  <g stroke="#fff" stroke-width="6" stroke-linecap="round" fill="none" opacity=".9"><path d="M250 140 q-10 -20 0 -40 q10 -20 0 -40"/><path d="M300 150 q-10 -20 0 -40 q10 -20 0 -40"/><path d="M350 140 q-10 -20 0 -40 q10 -20 0 -40"/></g>
+  <text x="300" y="615" text-anchor="middle" font-family="Chalkboard SE, Comic Sans MS, cursive" font-size="28" font-weight="700" fill="#1e5a2b" opacity=".6">replace me with a photo ♡</text>
+</svg>

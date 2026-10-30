@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 640">
+  <rect width="600" height="640" fill="#fde3a0"/>
+  <g fill="#f7c95a" opacity=".6"><circle cx="80" cy="90" r="30"/><circle cx="520" cy="150" r="40"/><circle cx="470" cy="520" r="34"/><circle cx="110" cy="500" r="24"/></g>
+  <g transform="translate(300 360) rotate(-8)" stroke="#1e5a2b" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M-60 40 L-140 -40 M60 40 L150 -50" fill="none"/>
+    <path d="M-40 110 L-90 200 M40 110 L100 190" fill="none"/>
+    <ellipse cx="0" cy="70" rx="80" ry="70" fill="#8ccf5e"/>
+    <circle cx="-40" cy="-40" r="30" fill="#8ccf5e"/><circle cx="40" cy="-40" r="30" fill="#8ccf5e"/>
+    <ellipse cx="0" cy="0" rx="90" ry="55" fill="#8ccf5e"/>
+    <circle cx="-40" cy="-42" r="15" fill="#fff" stroke-width="5"/><circle cx="40" cy="-42" r="15" fill="#fff" stroke-width="5"/>
+    <path d="M-30 10 Q0 40 30 10" fill="#ef5a7a"/>
+  </g>
+  <circle cx="261" cy="319" r="7" fill="#1e5a2b"/><circle cx="342" cy="307" r="7" fill="#1e5a2b"/>
+  <g fill="#1e5a2b"><path d="M120 150 L120 230 M120 150 L160 140 L160 220" stroke="#1e5a2b" stroke-width="7" fill="none" stroke-linecap="round"/><ellipse cx="110" cy="232" rx="14" ry="10"/><ellipse cx="150" cy="222" rx="14" ry="10"/>
+  <path d="M470 230 L470 300" stroke="#1e5a2b" stroke-width="7" stroke-linecap="round"/><path d="M470 230 q30 10 30 40" stroke="#1e5a2b" stroke-width="7" fill="none" stroke-linecap="round"/><ellipse cx="460" cy="302" rx="14" ry="10"/></g>
+  <text x="300" y="615" text-anchor="middle" font-family="Chalkboard SE, Comic Sans MS, cursive" font-size="28" font-weight="700" fill="#1e5a2b" opacity=".6">replace me with a photo ♡</text>
+</svg>

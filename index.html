@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#cfe5b4">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Happy Birthday ♡</title>
+  <meta name="description" content="Someone made you something ♡">
+  <meta property="og:title" content="Happy Birthday ♡">
+  <meta property="og:description" content="Someone made you something ♡">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ═════════════ INTRO ═════════════ -->
+  <section class="intro" id="intro" aria-label="A present for you">
+    <div class="intro-decor" aria-hidden="true">
+      <span class="d d1" data-art="sparkle"></span>
+      <span class="d d2" data-art="heart"></span>
+      <span class="d d3" data-art="star"></span>
+      <span class="d d4" data-art="heart"></span>
+      <span class="d d5" data-art="sparkle"></span>
+    </div>
+    <p class="intro-psst">psst… <span data-name></span></p>
+    <button class="gift" id="gift" aria-label="Tap to open your present"></button>
+    <p class="intro-hint" id="introHint">tap the present</p>
+    <p class="intro-sound">(sound on for the full experience ♪)</p>
+  </section>
+
+  <!-- ═════════════ APP ═════════════ -->
+  <main class="app" id="app" aria-hidden="true">
+    <button class="mute-btn" id="muteBtn" aria-label="Toggle sound" data-art="iconSound"></button>
+
+    <!-- ── CAKE ── -->
+    <section class="page" id="page-cake" data-page="cake" aria-label="Birthday cake">
+      <div class="decor-confetti" aria-hidden="true"></div>
+
+      <header class="title-card paper pop-in" style="--r:-2deg">
+        <span class="tape tape-green tape-top"></span>
+        <h1>Happy Birthday,<br><span class="name-line"><span data-name></span>!<span class="underline" data-art="underline"></span></span></h1>
+        <p class="sub">Someone made you something <button class="smiley" id="smiley" aria-label="smiley">:)</button></p>
+        <span class="doodle-heart" data-art="smallHeartOutline" aria-hidden="true"></span>
+      </header>
+
+      <div class="cake-stage">
+        <p class="scribble scribble-left pop-in" style="--d:.25s" data-scribble="0"></p>
+        <p class="scribble scribble-right pop-in" style="--d:.3s" data-scribble="1"></p>
+
+        <button class="sticker frog-sticker pop-in" id="frog" style="--d:.35s" aria-label="Poke the frog">
+          <span class="frog-body" data-art="frog"></span>
+          <span class="bubble" id="frogBubble"></span>
+        </button>
+        <button class="sticker lemon-sticker pop-in" id="lemon" style="--d:.4s" aria-label="Squeeze the lemon" data-art="lemon"></button>
+
+        <button class="sticky flip-card pop-in" id="sticky" style="--d:.45s;--r:6deg" aria-label="Flip the sticky note">
+          <span class="flip-inner">
+            <span class="face front" data-sticky-front></span>
+            <span class="face back" data-sticky-back></span>
+          </span>
+        </button>
+
+        <div class="cake-wrap pop-in" id="cakeWrap" style="--d:.15s">
+          <div class="cake-shadow"></div>
+          <div class="cake" id="cake"></div>
+          <div class="toppings" id="toppings"></div>
+          <p class="wish-label" id="wishLabel" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div class="dock">
+        <div class="topper-row">
+          <span class="topper-label pop-in" style="--d:.5s">add a<br>topping →</span>
+          <button class="topper pop-in" data-topper="cherry" style="--d:.55s" aria-label="Add a cherry"><span class="disc" data-art="cherry"></span></button>
+          <button class="topper pop-in" data-topper="star" style="--d:.6s" aria-label="Add a star"><span class="disc" data-art="star"></span></button>
+          <button class="topper pop-in" data-topper="heart" style="--d:.65s" aria-label="Add a heart"><span class="disc" data-art="heart"></span></button>
+        </div>
+        <div class="dock-row pop-in" style="--d:.45s">
+          <button class="side-btn" id="micBtn" aria-label="Blow into the microphone for real">
+            <span class="side-ico" data-art="iconMic"></span><span id="micLabel">mic</span>
+          </button>
+          <button class="big-btn" id="blowBtn">
+            <span class="big-btn-fill" id="blowFill"></span>
+            <span class="big-btn-icon" data-art="iconWind"></span>
+            <span class="big-btn-label" id="blowLabel">Hold to blow candles</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SCRAPBOOK ── -->
+    <section class="page" id="page-scrap" data-page="scrap" aria-label="Scrapbook">
+      <div class="decor-confetti" aria-hidden="true"></div>
+      <div class="board" id="board">
+        <header class="scrap-head">
+          <div class="title-card paper small pop-in" style="--r:-3deg">
+            <h2>Our<br>Scrapbook <span class="tiny-heart" data-art="smallHeartOutline"></span></h2>
+          </div>
+          <p class="scribble scrap-sub pop-in" style="--d:.15s">Little moments,<br>big happiness :)</p>
+          <div class="pink-note pop-in" style="--d:.25s;--r:5deg">You make everyday brighter ♡</div>
+        </header>
+
+        <div class="polaroids" id="polaroids"></div>
+
+        <p class="scribble scrap-end">More adventures together…♡</p>
+        <div class="placed-stickers" id="placedStickers"></div>
+      </div>
+
+      <div class="sticker-tray paper">
+        <span class="dash dash-l" aria-hidden="true"></span>
+        <div class="tray-items">
+          <button class="tray-item" data-sticker="lemon"><span class="disc" data-art="lemon"></span><span>lemon</span></button>
+          <button class="tray-item" data-sticker="frog"><span class="disc" data-art="frog"></span><span>frog</span></button>
+          <button class="tray-item" data-sticker="heart"><span class="disc" data-art="heart"></span><span>heart</span></button>
+          <button class="tray-item" data-sticker="sparkle"><span class="disc" data-art="sparkle"></span><span>sparkle</span></button>
+          <button class="tray-item" data-sticker="sun"><span class="disc" data-art="sun"></span><span>sun</span></button>
+        </div>
+        <span class="dash dash-r" aria-hidden="true"></span>
+        <p class="tray-hint">tap to stick · drag around · double-tap to peel off</p>
+      </div>
+      <input type="file" id="photoInput" accept="image/*" hidden>
+    </section>
+
+    <!-- ── PHOTO BOOTH ── -->
+    <section class="page" id="page-booth" data-page="booth" aria-label="Photo booth">
+      <div class="decor-confetti" aria-hidden="true"></div>
+      <div class="booth pop-in" id="booth" style="--d:.1s">
+        <div class="booth-sign" aria-hidden="true"><span class="bulbs top"></span>PHOTOS<span class="bulbs bottom"></span></div>
+        <button class="sticker booth-frog" id="boothFrog" aria-label="Booth frog">
+          <span class="frog-body" data-art="frog"></span>
+          <span class="bubble" id="boothBubble"></span>
+        </button>
+
+        <div class="booth-window">
+          <div class="viewfinder" id="viewfinder">
+            <video id="boothVideo" playsinline muted autoplay></video>
+            <canvas class="vf-freeze" id="vfFreeze"></canvas>
+            <span class="vf-guides" aria-hidden="true"></span>
+            <span class="vf-bulbs" id="vfBulbs" aria-hidden="true"><i></i><i></i><i></i></span>
+            <p class="vf-count" id="vfCount" aria-hidden="true"></p>
+            <p class="vf-prompt" id="vfPrompt" aria-live="polite"></p>
+            <div class="vf-empty">
+              <span>no camera here<br>(or it said no 🥲)</span>
+              <button id="pickPhotos">use photos instead ♡</button>
+            </div>
+            <span class="vf-flash" id="vfFlash" aria-hidden="true"></span>
+          </div>
+          <div class="curtain" aria-hidden="true"><span class="curtain-l"></span><span class="curtain-r"></span></div>
+          <p class="curtain-sign" aria-hidden="true">free ♡<small>pull the cord →</small></p>
+        </div>
+
+        <button class="cord" id="cord" aria-label="Pull the cord to open the curtain">
+          <span class="cord-string"></span>
+          <span class="cord-tassel" data-art="heart"></span>
+        </button>
+
+        <div class="shot-slots" id="shotSlots" aria-hidden="true"></div>
+        <div class="booth-slot" aria-label="your photos come out here"></div>
+      </div>
+
+      <div class="strip-ghost" id="stripGhost" aria-hidden="true">
+        <div class="ghost-paper" id="ghostPaper"></div>
+        <p class="ghost-label">your strip prints here ♡</p>
+      </div>
+
+      <div class="strip-out" id="stripOut" hidden>
+        <div class="strip-feed">
+          <div class="strip" id="strip">
+            <img id="stripImg" alt="Your photo booth strip">
+            <span class="tear-line" aria-hidden="true"></span>
+            <button class="snip" id="snip" aria-label="Tear the strip in two"><span>✂</span></button>
+          </div>
+        </div>
+        <p class="strip-hint" id="stripHint" aria-live="polite"></p>
+      </div>
+
+      <div class="dock booth-dock">
+        <div class="dock-row" id="boothSetup">
+          <button class="side-btn" data-act="style" aria-label="Strip style"><span class="mini-box style-mini"></span><span>style</span></button>
+          <button class="big-btn" id="boothBtn">
+            <span class="big-btn-icon" data-art="iconBooth"></span>
+            <span class="big-btn-label" id="boothLabel">Step inside ♡</span>
+          </button>
+        </div>
+        <div class="dock-row result-row" id="stripActions" hidden>
+          <button class="booth-act" data-act="style" style="--i:0"><span class="disc"><span class="mini-box style-mini"></span></span><span>style</span></button>
+          <button class="booth-act" data-act="keep" style="--i:1"><span class="disc" data-art="iconDownload"></span><span>save</span></button>
+          <button class="booth-act" data-act="send" style="--i:2"><span class="disc" data-art="iconSend"></span><span>send</span></button>
+          <button class="booth-act" data-act="tuck" style="--i:3"><span class="disc" data-art="iconPhoto"></span><span>scrapbook</span></button>
+          <button class="booth-act" data-act="again" style="--i:4"><span class="disc" data-art="iconAgain"></span><span>again</span></button>
+        </div>
+      </div>
+      <input type="file" id="boothFiles" accept="image/*" multiple hidden>
+    </section>
+
+    <!-- ── NOTES ── -->
+    <section class="page" id="page-notes" data-page="notes" aria-label="A letter for you">
+      <div class="decor-confetti" aria-hidden="true"></div>
+
+      <div class="notes-top">
+        <div class="pink-note note-left pop-in" style="--r:-6deg">You make my days brighter ♡</div>
+        <p class="scribble note-right pop-in" style="--d:.1s">So glad<br>it's you ♡</p>
+        <div class="frog-heart pop-in" style="--d:.2s" data-art-frog-heart></div>
+
+        <div class="envelope pop-in" id="envelope" style="--d:.1s">
+          <div class="env-back"></div>
+          <div class="env-card">
+            <span class="env-card-heart" data-art="heart"></span>
+            <span class="env-card-rays"></span>
+          </div>
+          <div class="env-front">
+            <svg viewBox="0 0 260 170" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M4 40 L130 112 L256 40 L256 160 Q256 166 250 166 L10 166 Q4 166 4 160 Z" fill="#f6edd2" stroke="#1e5a2b" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M4 166 L110 98 M256 166 L150 98" fill="none" stroke="#1e5a2b" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+            </svg>
+          </div>
+          <div class="env-flap">
+            <svg viewBox="0 0 260 120" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M4 6 Q4 2 10 2 L250 2 Q256 2 256 6 L136 104 Q130 109 124 104 Z" fill="#efe3c2" stroke="#1e5a2b" stroke-width="4" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <button class="env-seal" id="envSeal" aria-label="Open the letter" data-art="heart"></button>
+          <p class="env-hint" id="envHint">tap the heart to open</p>
+        </div>
+      </div>
+
+      <article class="letter paper" id="letter" aria-live="polite">
+        <span class="tape tape-green tape-top"></span>
+        <span class="letter-star" data-art="star" aria-hidden="true"></span>
+        <div class="letter-body" id="letterBody"></div>
+        <p class="letter-sign" id="letterSign"></p>
+      </article>
+
+      <div class="hug-zone">
+        <div class="heart-note pop-in" style="--r:-8deg"><span>Happy<br>birthday<br>to you ♡</span></div>
+        <button class="hug-btn" id="hugBtn" aria-label="Hold to send a hug">
+          <svg class="hug-ring" viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="60" cy="60" r="54" fill="none" stroke="#b9dc9c" stroke-width="9"/>
+            <circle id="hugProgress" cx="60" cy="60" r="54" fill="none" stroke="#2e8b3e" stroke-width="9" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0" transform="rotate(-90 60 60)"/>
+          </svg>
+          <span class="hug-core">
+            <span class="hug-heart" data-art="heart"></span>
+            <span class="hug-rays"></span>
+          </span>
+        </button>
+        <p class="hug-label" id="hugLabel">Hold to send a hug</p>
+        <p class="hug-count" id="hugCount"></p>
+      </div>
+
+      <div class="daisy-zone">
+        <div class="daisy" id="daisy"></div>
+        <span class="tape tape-green daisy-tape"></span>
+        <p class="daisy-label" id="daisyLabel">pluck a petal…</p>
+      </div>
+
+      <footer class="made-with">
+        <button class="made-btn" id="madeBtn">made with ♡ by <span data-from></span>, for you</button>
+      </footer>
+    </section>
+
+    <!-- tab bar -->
+    <nav class="tabbar" aria-label="Sections">
+      <span class="tab-blob" id="tabBlob" aria-hidden="true"></span>
+      <button class="tab is-active" data-tab="cake" aria-current="page"><span data-art="iconCake"></span><span>Cake</span></button>
+      <button class="tab" data-tab="scrap"><span data-art="iconPhoto"></span><span>Scrapbook</span></button>
+      <button class="tab" data-tab="booth"><span data-art="iconBooth"></span><span>Booth</span></button>
+      <button class="tab" data-tab="notes"><span data-art="iconNote"></span><span>Notes</span></button>
+    </nav>
+  </main>
+
+  <!-- ═════════════ PHOTO DETAIL ═════════════ -->
+  <section class="detail" id="detail" hidden aria-label="Memory">
+    <div class="decor-confetti" aria-hidden="true"></div>
+    <header class="detail-bar">
+      <button class="back-btn" id="backBtn"><span data-art="iconBack"></span>Our Scrapbook</button>
+      <span class="detail-count" id="detailCount"></span>
+    </header>
+
+    <div class="detail-photo-wrap">
+      <figure class="detail-polaroid" id="detailPolaroid">
+        <span class="tape tape-green tape-top" id="detailTape"></span>
+        <div class="detail-photo" id="detailPhoto">
+          <img id="detailImg" alt="">
+          <div class="kiss-layer" id="kissLayer"></div>
+        </div>
+        <span class="corner-heart" data-art="heart" aria-hidden="true"></span>
+        <span class="corner-frog" data-art="frog" aria-hidden="true"></span>
+        <span class="you-me" aria-hidden="true">you<br>+<br>me ♡</span>
+      </figure>
+      <p class="swipe-hint">← swipe · double-tap for ♡ →</p>
+    </div>
+
+    <div class="caption-card paper">
+      <span class="tape tape-pink caption-tape"></span>
+      <h3 id="detailCaption"></h3>
+      <span class="underline" data-art="underline"></span>
+      <p id="detailStory"></p>
+    </div>
+
+    <div class="reactions">
+      <span class="dash dash-l" aria-hidden="true"></span>
+      <button class="reaction" data-react="heart"><span class="disc" data-art="heart"></span><span>heart</span></button>
+      <button class="reaction" data-react="star"><span class="disc" data-art="star"></span><span>star</span></button>
+      <button class="reaction" data-react="kiss"><span class="disc" data-art="lips"></span><span>kiss</span></button>
+      <button class="reaction" data-react="cat"><span class="disc" data-art="cat"></span><span>cat</span></button>
+      <span class="dash dash-r" aria-hidden="true"></span>
+    </div>
+
+    <button class="toss-btn" id="tossBtn" hidden><span class="toss-ico" data-art="iconToss"></span><span id="tossLabel">toss this one</span></button>
+  </section>
+
+  <!-- ═════════════ OVERLAYS ═════════════ -->
+  <div class="wish-overlay" id="wishOverlay" aria-live="polite">
+    <p class="wish-text">close your eyes…<br><span>and make a wish ✨</span></p>
+  </div>
+
+  <div class="hug-overlay" id="hugOverlay" aria-live="polite">
+    <div class="hug-frogs">
+      <span class="hf hf-l" data-art-frog-plain></span>
+      <span class="hf hf-r" data-art-frog-plain></span>
+      <span class="hf-heart" data-art="heart"></span>
+    </div>
+    <p class="hug-msg">hug delivered!<br><span>she'll collect a real one in person ♡</span></p>
+  </div>
+
+  <div class="cat-peek" id="catPeek" aria-hidden="true">
+    <span class="bubble cat-bubble">mrrp! happy birthday</span>
+    <span class="cat-art" data-art="cat"></span>
+  </div>
+
+  <div class="booth-flash" id="boothFlash" aria-hidden="true"></div>
+  <div class="sheet-scrim" id="sheetScrim"></div>
+  <div class="booth-tray paper sheet" id="boothTray" role="dialog" aria-label="Strip style" aria-hidden="true">
+    <span class="tape tape-pink"></span>
+    <div class="opt-row"><span class="opt-label">strip</span><div class="opt-chips" id="optFmt"></div></div>
+    <div class="opt-row"><span class="opt-label">turn</span><div class="opt-chips" id="optTurn"></div></div>
+    <div class="opt-row"><span class="opt-label">paper</span><div class="opt-chips" id="optPaper"></div></div>
+    <div class="opt-row"><span class="opt-label">look</span><div class="opt-chips" id="optFilter"></div></div>
+    <button class="sheet-done" id="sheetDone">done ♡</button>
+  </div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <div class="fx" id="fx" aria-hidden="true"></div>
+  <div class="toast" id="toast" role="status"></div>
+  <label class="haptic-switch" aria-hidden="true"><input type="checkbox" switch tabindex="-1"></label>
+
+  <script src="js/config.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/fx.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/booth.js"></script>
+</body>
+</html>
