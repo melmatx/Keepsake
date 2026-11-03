@@ -891,6 +891,10 @@
   let skipWriting = false;
   letter.addEventListener("click", () => (skipWriting = true));
 
+  // split by what you see, so emoji like ❤️ stay in one piece
+  const segmenter = window.Intl?.Segmenter && new Intl.Segmenter();
+  const graphemes = (s) => (segmenter ? [...segmenter.segment(s)].map((g) => g.segment) : [...s]);
+
   function writeLetter() {
     const chars = [];
     const loves = [];
@@ -905,7 +909,7 @@
           if (/^\s+$/.test(w)) { host.appendChild(document.createTextNode(" ")); return; }
           const word = document.createElement("span");
           word.className = "word";
-          [...w].forEach((ch) => {
+          graphemes(w).forEach((ch) => {
             const c = document.createElement("span");
             c.className = "ch";
             c.textContent = ch;
@@ -919,10 +923,31 @@
       letterBody.appendChild(p);
       chars.push(null); // tiny pause between lines
     });
+    // a tall letter tilted -1deg drifts off screen at the bottom, so tilt it less (max ~8px of drift)
+    const tilt = Math.min(1, (Math.atan(8 / letterBody.offsetHeight) * 180) / Math.PI);
+    letter.style.setProperty("--tilt", `-${tilt.toFixed(2)}deg`);
+
+    // the paper grows word by word as it's written (instead of a page of empty lines up front),
+    // and the page follows the pen unless you've scrolled away to reread
+    const pending = $$(".word, p", letterBody);
+    pending.forEach((el) => el.classList.add("pending"));
+    let lastWord = null;
+    const inView = (el) => { const r = el.getBoundingClientRect(); return r.top >= 0 && r.bottom <= innerHeight - 110; };
+    const reveal = (c) => {
+      const word = c.parentElement;
+      if (!word.classList.contains("pending")) return;
+      const follow = !lastWord || inView(lastWord);
+      word.classList.remove("pending");
+      word.closest("p").classList.remove("pending");
+      lastWord = word;
+      const r = word.getBoundingClientRect();
+      if (follow && r.bottom > innerHeight - 140) window.scrollBy({ top: r.bottom - innerHeight * 0.6, behavior: "smooth" });
+    };
 
     let i = 0;
     const next = () => {
       if (skipWriting) {
+        pending.forEach((el) => el.classList.remove("pending"));
         chars.forEach((c) => c && c.classList.add("on"));
         loves.forEach((l) => l.el.classList.add("drawn"));
         return finish();
@@ -930,6 +955,7 @@
       if (i >= chars.length) return finish();
       const c = chars[i++];
       if (c) {
+        reveal(c);
         c.classList.add("on");
         if (i % 3 === 0) Sound.noise({ dur: 0.03, freq: 4200, type: "highpass", vol: 0.035 });
       }

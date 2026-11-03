@@ -556,17 +556,18 @@ button:active .disc { transform: scale(.86) rotate(-6deg); box-shadow: 0 1px 0 r
   transition: max-height 1s var(--soft), opacity .4s, transform .8s var(--spring), padding .4s;
 }
 .letter:not(.open) { padding-top: 0; padding-bottom: 0; }
-.letter.open { max-height: 1400px; opacity: 1; transform: rotate(-1deg); overflow: visible; }
+.letter.open { max-height: 6000px; opacity: 1; transform: rotate(var(--tilt, -1deg)); overflow: visible; }
 .letter-star { position: absolute; right: 14px; top: 16px; width: 30px; height: 30px; animation: floaty 2.8s ease-in-out infinite; }
 .letter-body { font-size: 24px; line-height: 36px; font-weight: 700; }
 .letter-body p { margin: 0 0 0; }
-.letter-body p + p { margin-top: 0; }
+.letter-body p + p { margin-top: 36px; }
 .letter-body p:first-child { margin-bottom: 4px; }
 .word { display: inline-block; white-space: nowrap; }
+.letter-body .pending { display: none; }
 .ch { display: inline-block; opacity: 0; }
 .ch.on { animation: ink .32s var(--soft) forwards; }
 @keyframes ink { 0% { opacity: 0; transform: translateY(4px) scale(1.4) rotate(-8deg); filter: blur(2px); } 100% { opacity: 1; transform: none; filter: none; } }
-.love { position: relative; display: inline; }
+.love { position: relative; display: inline-block; }
 .love::after {
   content: ""; position: absolute; left: -4px; right: -6px; bottom: -2px; height: 10px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 10' preserveAspectRatio='none'%3E%3Cpath d='M3 6 C40 2 80 9 120 5 C150 2 180 5 197 6' fill='none' stroke='%23ef5a7a' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
