@@ -2,11 +2,20 @@
 
 A tiny handmade birthday site. Plain HTML/CSS/JS, no build step, made for GitHub Pages.
 
+## Screenshots
+
+| Intro | Cake | Scrapbook |
+| :---: | :---: | :---: |
+| <img src="screenshots/intro.jpg" width="250" alt="Intro: tap the present"> | <img src="screenshots/cake.jpg" width="250" alt="Cake tab"> | <img src="screenshots/scrapbook.jpg" width="250" alt="Scrapbook tab"> |
+| **Photo view** | **Booth** | **Notes** |
+| <img src="screenshots/photo.jpg" width="250" alt="A scrapbook photo opened up"> | <img src="screenshots/booth.jpg" width="250" alt="Photo booth tab"> | <img src="screenshots/notes.jpg" width="250" alt="Notes tab"> |
+
 ## Make it yours
 Edit **`js/config.js`**: name, candle count, scribbles, scrapbook memories, the letter, frog lines.
 
 **Photos:** drop them into `photos/` (e.g. `photos/first-date.jpg`) and set each memory's `src`.
-Square-ish photos look best. Add or remove memories freely.
+Square-ish photos look best; add `fit: "contain"` to show a whole photo uncropped (e.g. a photo strip).
+Keep them web-sized (~1400px, JPEG) so the scrapbook loads fast on a phone. Add or remove memories freely.
 
 **Photo booth:** `boothPrompts` (one per photo; the last one is always saved for the last photo),
 `boothCheers`, and `boothCaption` (printed on every strip) live in `config.js` too.
