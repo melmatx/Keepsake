@@ -3,7 +3,7 @@
    ───────────────────────────────────────────────────────────── */
 window.BDAY = {
   name: "Justin",
-  from: "me", // how you sign the letter
+  from: "mel", // how you sign the letter
   candles: 5, // how many candles on the cake
 
   // little scribbles on the cake page
@@ -229,11 +229,13 @@ window.BDAY = {
   // Each string is one line. Wrap words in *stars* to underline them in pink.
   letter: [
     "Dear Justin,",
-    "Happy birthday!!",
-    "I know we're still new, but I'm so happy I get to celebrate this one with you.",
-    "I hope today is full of good food, good people, and at least one really big slice of cake.",
-    "Here's to your best year yet.",
-    "*I love you so much.*",
+    "*Happy Birthday!!!* ❤️",
+    "I thank the universe every day for letting me meet someone like you. You are the most handsome, caring, down-to-earth, sweet, gentle, affectionate, supportive, thoughtful, and kind-hearted person in the whole wide world, along with every other nice adjective that exists in the dictionary. There are no words to describe how happy and lucky I am to have you.",
+    "Di ko aakalain na makakameet ako ng katulad mo. You've been everything I could ever ask for and everything I've needed since the day I met you. I didn't even think a person like you could exist, but there you are, with all your beauty, inside and out. You make my days easier and fill them with so much love. You have no idea how much you've impacted my life and made everything feel so much calmer and happier.",
+    "Your words never fail to make my heart flutter and remind me what it feels like to be genuinely cared for. The way you handle me and everything around you makes me fall in love with you more and more each day. I hope we stay together until the end of time, and I hope it will always be us, to the moon and back.",
+    "I know I might not be there with you physically on your birthday, but rest assured na I'm always here for you, even if it's just virtually. I'm always by your side and always thinking of you. Still, I'm happy that I get to celebrate your birthday with you, even from afar. I hope you enjoy your special day and always keep that beautiful smile on your face. Mas cute ka that way.",
+    "Don't overthink anything na nangyari these past few days. It's all good, you're good, and I'm good. I love you, and I will always love you, no matter what. Lahat ng obstacles na darating, haharapin natin together, and that's something I will always assure you of. Whatever life throws our way, I hope you always remember that we're in this together.",
+    "Happy birthday again, my love! Mwaaa, *I love you so much!!!* ❤️",
   ],
 
   // ── Photo booth ──────────────────────────────────────────────
