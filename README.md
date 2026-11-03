@@ -30,6 +30,11 @@ which both only work on `localhost` or `https`, so GitHub Pages is fine).
 2. Repo → **Settings → Pages** → Source: *Deploy from a branch* → `main` / `(root)` → Save.
 3. In a minute it's live at `https://<your-username>.github.io/<repo-name>/`.
 
+## Share it
+[`share/ig-story-qr.png`](share/ig-story-qr.png) is a 1080×1920 Instagram story card with a QR code
+to https://melmatx.github.io/Keepsake/. Add a link sticker with the same URL too, since people
+can't scan a QR on their own screen.
+
 ## Hidden things to find
 - Tap the present 3 times to open it
 - Tap flames one by one, hold the button, or **blow on the phone** (mic)
